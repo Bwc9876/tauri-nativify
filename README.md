@@ -1,7 +1,23 @@
-# Tauri + Vanilla TS
+# tauri-nativify
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Typescript.
+A silly app that opens a URL in the system webview using tauri.
 
-## Recommended IDE Setup
+Did I need to use tauri for this? who knows!
 
--   [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+## Setup
+
+`cargo tauri build -b none` to get the binary.
+
+Then create a .desktop file pointing to the binary passing the first argument as the URL to open. Optionally you can pass the second argument as the name of the app.
+
+Example desktop file:
+
+```toml
+[Desktop Entry]
+Name=Google Messages
+Comment=Send and receive messages from your Android Phone
+Exec=/path/to/tauri-nativify "https://messages.google.com/web/conversations" Messages
+Terminal=false
+Type=Application
+Icon=org.kde.neochat
+```
