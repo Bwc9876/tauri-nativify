@@ -12,7 +12,7 @@ Then create a .desktop file pointing to the binary passing the first argument as
 
 Example desktop file:
 
-```toml
+```desktop
 [Desktop Entry]
 Name=Google Messages
 Comment=Send and receive messages from your Android Phone
