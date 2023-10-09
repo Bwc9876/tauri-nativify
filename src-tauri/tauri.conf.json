@@ -18,6 +18,9 @@
             "targets": "all",
             "identifier": "com.bwc9876.tauri-nativify"
         },
+        "updater": {
+            "active": false
+        },
         "security": {
             "csp": null
         },
